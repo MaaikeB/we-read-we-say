@@ -1,11 +1,21 @@
 import React from 'react';
 
+import TimingStore from '../stores/timing-store.babel.js'
+
 import DatePicker from './datepicker.babel.js';
 import HeadLine from './headline.babel.js';
 import Location from './location.babel.js';
 import Comments from './comments.babel.js';
 
 const Container = React.createClass({
+
+		componentDidMount() {
+			TimingStore.addChangeListener(this._onStoreChange);
+		},
+
+		_onStoreChange() {
+			console.log('onStoreChange');
+		},
 
     render() {
         return (
