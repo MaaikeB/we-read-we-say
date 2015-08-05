@@ -1,0 +1,30 @@
+{
+  "name": "we-read-we-say",
+  "version": "1.0.0",
+  "description": "Find out what happened on a certain date and what people had to say about it.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaaikeB/we-read-we-say.git"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "react-bootstrap"
+  ],
+  "author": "Maaike van der Brugghen",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "react": "^0.13.3"
+  },
+  "bugs": {
+    "url": "https://github.com/MaaikeB/we-read-we-say/issues"
+  },
+  "homepage": "https://github.com/MaaikeB/we-read-we-say"
+}
