@@ -1,8 +1,17 @@
 
-.datepicker, .location {
+.datepicker-row, .location {
     margin-top:30px;
 }
 
 .comments {
     margin-top:15px;
+}
+
+.datepicker-row input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tether-target {
+    float:left;
 }

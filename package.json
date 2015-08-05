@@ -22,8 +22,10 @@
     "browserify": "^11.0.1",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.0",
+    "moment": "^2.10.6",
     "react": "^0.13.3",
-    "react-bootstrap": "^0.24.3"
+    "react-bootstrap": "^0.24.3",
+    "react-datepicker": "^0.11.3"
   },
   "bugs": {
     "url": "https://github.com/MaaikeB/we-read-we-say/issues"
