@@ -12,6 +12,7 @@ The challenge is to manage Components that are dependent on one or more data req
 
 ## run
 
+npm install
 gulp
 browserify dist/main.babel.js -o bundle.js
 open index.html in the browser

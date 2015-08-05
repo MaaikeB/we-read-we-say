@@ -4,7 +4,22 @@ const Comments = React.createClass({
 
 	render() {
 		return (
-			<h1>Comments</h1>
+			<div className="comments row">
+				<table className="table table-striped table-bordered col-xs-12">
+					<tr>
+						<td>Maaike says</td>
+						<td>what I say...!</td>
+					</tr>
+					<tr>
+						<td>Maaike says</td>
+						<td>what I say...!</td>
+					</tr>
+					<tr>
+						<td>Maaike says</td>
+						<td>what I say...!</td>
+					</tr>
+				</table>
+			</div>
 		);
 	}
 });

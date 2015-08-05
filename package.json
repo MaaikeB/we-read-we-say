@@ -18,10 +18,12 @@
   "author": "Maaike van der Brugghen",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.0",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.24.3"
   },
   "bugs": {
     "url": "https://github.com/MaaikeB/we-read-we-say/issues"

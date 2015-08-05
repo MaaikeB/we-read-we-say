@@ -1,10 +1,15 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
 
 const DatePicker = React.createClass({
 
   render() {
     return (
-      <h1>DatePicker</h1>
+      <div className="datepicker row">
+	      <div className="col-xs-12">
+		      On <Button className="btn-success">Pick a date!</Button> we read:
+	      </div>
+      </div>
         );
   }
 });
