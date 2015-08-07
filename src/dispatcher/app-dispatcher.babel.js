@@ -13,7 +13,7 @@ const AppDispatcher = $.extend({}, new Dispatcher(), {
 		},
 
 		handleServerAction(action) {
-			payload = {
+			let payload = {
 				source: "VIEW_ACTION",
 				action: action
 			}

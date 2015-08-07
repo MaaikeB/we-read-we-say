@@ -1,25 +1,23 @@
 
+import $ from 'jquery'
 import EventEmitter from 'events'
 import AppDispatcher from '../dispatcher/app-dispatcher.babel.js'
-import $ from 'jquery'
-
-const CHANGE_EVENT = 'CHANGE'
 
 var _date;
 var _location;
 
 const TimingStore = $.extend({}, EventEmitter.prototype, {
 
-			emitChange() {
-				this.emit(CHANGE_EVENT);
+			emitChange(changeEvent) {
+				this.emit(changeEvent);
 			},
 
-			addChangeListener(callback) {
-				this.on(CHANGE_EVENT, callback);
+			addChangeListener(changeEvent, callback) {
+				this.on(changeEvent, callback);
 			},
 
-			removeChangeListener(callback) {
-				this.removeListener(CHANGE_EVENT, callback);
+			removeChangeListener(changeEvent, callback) {
+				this.removeListener(changeEvent, callback);
 			},
 
 			getDate() {
@@ -37,9 +35,10 @@ TimingStore.dispatchToken = AppDispatcher.register(function(payload) {
 	var action = payload.action;
 
 	switch (action.type) {
+
 		case 'STORE_DATE':
-			_date = action.date;
-			TimingStore.emitChange()
+			_date = action.data;
+			TimingStore.emitChange('STORED_DATE');
 			break;
 	}
 });
