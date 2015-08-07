@@ -3,7 +3,7 @@ import $ from 'jquery'
 import EventEmitter from 'events'
 import AppDispatcher from '../dispatcher/app-dispatcher.babel.js'
 
-var _headLines;
+var _headlines;
 
 const HeadlinesStore = $.extend({}, EventEmitter.prototype, {
 
@@ -19,7 +19,7 @@ const HeadlinesStore = $.extend({}, EventEmitter.prototype, {
 			this.removeListener(changeEvent, callback);
 		},
 
-		getHeadLines() {
+		getHeadlines() {
 			return _headlines;
 		}
 	}
@@ -31,7 +31,7 @@ HeadlinesStore.dispatchToken = AppDispatcher.register(function(payload) {
 	switch (action.type) {
 
 		case 'STORE_HEADLINES':
-			_headLines = action.data;
+			_headlines = action.data;
 			HeadlinesStore.emitChange('STORED_HEADLINES');
 			break;
 

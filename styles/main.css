@@ -12,6 +12,6 @@
     margin-right: 10px;
 }
 
-.tether-target {
+.tether-target, input {
     float:left;
 }
