@@ -3,9 +3,9 @@ import $ from 'jquery'
 import EventEmitter from 'events'
 import AppDispatcher from '../dispatcher/app-dispatcher.babel.js'
 
-var _headlines;
+var _pictures;
 
-const HeadlinesStore = $.extend({}, EventEmitter.prototype, {
+const PicturesStore = $.extend({}, EventEmitter.prototype, {
 
 		emitChange(changeEvent) {
 			this.emit(changeEvent);
@@ -19,30 +19,25 @@ const HeadlinesStore = $.extend({}, EventEmitter.prototype, {
 			this.removeListener(changeEvent, callback);
 		},
 
-		getHeadline() {
-			return _headlines[0].headline.main;
-		},
-
-		getHeadlines() {
-			return _headlines;
+		getPictures() {
+			return _pictures;
 		}
 	}
 )
 
-HeadlinesStore.dispatchToken = AppDispatcher.register(function(payload) {
+PicturesStore.dispatchToken = AppDispatcher.register(function(payload) {
 	var action = payload.action;
 
 	switch (action.type) {
 
-		case 'STORE_HEADLINES':
-			_headlines = action.data;
-			HeadlinesStore.emitChange('STORED_HEADLINES')
+		case 'STORE_PICTURES':
+			_pictures = action.data;
+			PicturesStore.emitChange('CHANGE');
 			break;
-
 	}
 });
 
-export default HeadlinesStore;
+export default PicturesStore;
 
 
 

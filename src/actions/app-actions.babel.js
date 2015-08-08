@@ -31,6 +31,33 @@ const TimingActions = {
 		);
 
 	},
+
+	getFirstTwoWords(headline) {
+		var wordsArray = headline.split(" ");
+		var result = wordsArray[0] + wordsArray[1];
+		return result.toLowerCase();
+	},
+
+	getPictures(headline, date) {
+
+		let tag = this.getFirstTwoWords(headline);
+
+		let url = 'https://api.instagram.com/v1/tags/' +
+			tag +
+			'/media/recent?' +
+			'client_id=062b90422f7c486ea4e3ef36b165de16';
+
+		$.ajax({
+			type: "GET",
+			dataType: 'jsonp',
+			url: url
+		}).done(function(response) {
+			Dispatcher.handleServerAction({
+				type: 'STORE_PICTURES',
+				data: response.data
+			})
+		});
+	}
 }
 
 module.exports = TimingActions
